@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+       .contianer{
+        /* height: 800px; */
+        width: 1200px;
+        background: rgba(41, 40, 40, 0.599);
+        margin: 100px auto;
+        padding: 10px;
+        position: relative;
+       }
+
+       .image{
+        height: 600px;
+        width: 1100px;
+        /* background: lightblue; */
+        margin: auto;
+        margin-bottom: 20px;
+       }
+
+       .slider{
+        display: flex;
+        gap: 10px;
+       }
+       .inner{
+        width: 1100px;
+        height: 200px;
+        /* background: lightcoral; */
+        margin: auto;
+        padding: 0px 10px;
+        border-radius: 10px;
+       
+       }
+
+      #change img{
+        object-fit: contain;
+        width: 212px;
+        height: 185px;
+        object-fit: cover;
+        margin-top: 8px;
+        filter: brightness(40%);
+        border-radius: 10px;
+        
+       }
+       .image img{
+        height: 600px;
+        width: 1100px;
+        /* opacity: .5; */
+        
+       }
+
+       button{
+         position: absolute;
+         border: none;
+         background: transparent;
+         font-size: 30px;
+         
+       }
+
+       .btn1{
+          bottom: 90px;
+          left: 0;
+       }
+
+       .btn2{
+         right: 0;
+         bottom: 90px;
+       }
+    </style>
+</head>
+<body>
+    <div class="contianer">
+        <div class="image">
+             <img id="result" src="" alt="">
+        </div>
+        <!-- <button onclick="left()" class="btn1"><i class="fa-solid fa-arrow-left"></i></button> -->
+       <div class="inner">
+        <div class="slider" id="change">
+           
+            <img onclick="test1()" class="slide" src="img1.jpg" alt="">
+            <img onclick="test2()" class="slide" src="img2.jpg" alt="">
+            <img onclick="test3()" class="slide" src="img3.jpg" alt="">
+            <img onclick="test4()" class="slide" src="img4.jpg" alt="">
+            <img onclick="test5()" class="slide" src="img5.jpg" alt="">
+           
+          
+            
+         </div>
+       </div>
+        <!-- <button class="btn2"><i class="fa-solid fa-arrow-right"></i></button> -->
+    </div>
+    <script>
+          img = document.getElementsByClassName('slide');
+          change = document.getElementById('change');
+          result = document.getElementById('result');
+          console.log(change)
+          console.log(result)
+
+          console.log(img);
+
+          function test1()
+          {
+             result.src = "img1.jpg"
+             img[0].style.filter = "brightness(100%)"
+          }
+          function test2()
+          {
+             result.src = "img2.jpg"
+             img[1].style.filter = "brightness(100%)"
+          }
+          function test3()
+          {
+             result.src = "img3.jpg"
+             img[2].style.filter = "brightness(100%)"
+          }
+          function test4()
+          {
+             result.src = "img4.jpg"
+             img[3].style.filter = "brightness(100%)"
+          }
+          function test5()
+          {
+             result.src = "img5.jpg"
+             img[4].style.filter = "brightness(100%)"
+          }
+
+
+
+          index = 0;
+
+
+          function showimg()
+          {
+            for(i=0;i<img.length;i++)
+          {
+            img
+          }
+          }
+
+         
+
+
+    
+
+
+
+        
+      
+
+    </script>
+</body>
+</html>
